@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aurelia Hospital - Premium Healthcare Platform">
+<meta name="theme-color" content="#071d2b">
+<title>Aurelia Hospital | Advanced Healthcare</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- ======================================================
+     LOADER
+====================================================== -->
+
+<div class="loader" id="loader">
+  <div class="loader-logo">
+    <div class="logo-icon">✚</div>
+    <h2>Aurelia Hospital</h2>
+    <p>Advanced care. Human heart.</p>
+  </div>
+</div>
+
+<!-- ======================================================
+     NAVBAR
+====================================================== -->
+
+<header class="navbar">
+  <div class="container nav-inner">
+
+    <a href="#home" class="brand">
+      <span class="brand-icon">✚</span>
+      <span>Aurelia<span style="color:var(--primary)">.</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#beds">Beds</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline" onclick="openAuth('login')">Login</button>
+      <button class="btn btn-primary" onclick="openAppointment()">Book Visit</button>
+      <button class="menu-btn" type="button" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰</button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ======================================================
+     MAIN LANDING PAGE
+====================================================== -->
+
+<main id="mainSite">
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="hero-orb orb-one" aria-hidden="true"></div>
+  <div class="hero-orb orb-two" aria-hidden="true"></div>
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+  <div class="container hero-grid">
+
+    <div class="hero-copy">
+      <div class="hero-badge">
+        <span class="status-dot" aria-hidden="true"></span>
+        24/7 EMERGENCY & TELEHEALTH
+      </div>
+
+      <h1>
+        Healthcare that puts
+        <span>you first.</span>
+      </h1>
+
+      <p>
+        Experience a smarter, more connected hospital where advanced
+        technology meets compassionate medical care.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="openAppointment()">
+          📅 Book an Appointment
+        </button>
+
+        <button class="btn btn-outline" onclick="openAuth('register')">
+          Create Patient Account
+        </button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>150+</strong>
+          <span>Expert Doctors</span>
+        </div>
+
+        <div class="stat">
+          <strong>25+</strong>
+          <span>Specialties</span>
+        </div>
+
+        <div class="stat">
+          <strong>50K+</strong>
+          <span>Patients Served</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-parallax-area>
+      <div class="hero-scene" data-tilt-area>
+        <div class="hero-depth hero-depth-back" aria-hidden="true"></div>
+        <div class="hero-depth hero-depth-side" aria-hidden="true"></div>
+        <div class="hero-ring" aria-hidden="true"></div>
+
+      <div class="hero-photo" data-tilt data-tilt-strength="5">
+        <img
+          src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&amp;fit=crop&amp;w=1600&amp;q=90"
+          alt="Modern hospital">
+        <div class="hero-photo-shine" aria-hidden="true"></div>
+      </div>
+
+      <div class="floating-card glass-panel" data-tilt data-tilt-strength="8">
+        <div class="circle">♥</div>
+        <div class="floating-card-label">AURELIA STANDARD</div>
+        <strong>Patient First Care</strong>
+        <small>Trusted by thousands of families.</small>
+      </div>
+
+      <div class="hero-overlay glass-panel" data-tilt data-tilt-strength="4">
+        <strong>🟢 Emergency Center</strong>
+        <small>Open 24 hours · Every day</small>
+      </div>
+
+      <div class="hero-telemetry glass-panel" data-tilt data-tilt-strength="6">
+        <span class="telemetry-pulse" aria-hidden="true"></span>
+        <div>
+          <strong>98.4%</strong>
+          <small>care satisfaction</small>
+        </div>
+        <span class="telemetry-arrow" aria-hidden="true">↗</span>
+      </div>
+
+      <div class="hero-signal" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- QUICK ACCESS -->
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="section-tag">CARE AT YOUR FINGERTIPS</span>
+      <h2>Everything you need in one place</h2>
+      <p>Access essential hospital services through one simple digital experience.</p>
+    </div>
+
+    <div class="quick-grid">
+
+      <div class="quick-card">
+        <div class="quick-icon">📅</div>
+        <h3>Appointments</h3>
+        <p>Find a specialist and schedule your visit.</p>
+        <button class="btn btn-outline btn-small" onclick="openAppointment()">Book Now →</button>
+      </div>
+
+      <div class="quick-card">
+        <div class="quick-icon">🧪</div>
+        <h3>Lab Reports</h3>
+        <p>View and manage your diagnostic reports.</p>
+        <button class="btn btn-outline btn-small" onclick="openAuth('login')">View Reports →</button>
+      </div>
+
+      <div class="quick-card">
+        <div class="quick-icon">💊</div>
+        <h3>Prescriptions</h3>
+        <p>Keep your prescriptions available digitally.</p>
+        <button class="btn btn-outline btn-small" onclick="openAuth('login')">View Prescriptions →</button>
+      </div>
+
+      <div class="quick-card">
+        <div class="quick-icon">💳</div>
+        <h3>Payments</h3>
+        <p>Pay hospital bills securely online.</p>
+        <button class="btn btn-outline btn-small" onclick="openPayment()">Pay Bill →</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+
+<section class="section facility-section" id="facilities">
+  <div class="container">
+
+    <div class="section-head facility-heading">
+      <span class="section-tag">ONE CONNECTED CARE NETWORK</span>
+      <h2>Every Aurelia facility, designed around your day.</h2>
+      <p>Move from specialist offices to diagnostics and recovery spaces without losing the calm, connected experience.</p>
+    </div>
+
+    <div class="facility-grid" id="facilityGrid"></div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="section-tag">SPECIALIZED CARE</span>
+      <h2>Our Medical Services</h2>
+      <p>Comprehensive healthcare services delivered by experienced specialists.</p>
+    </div>
+
+    <div class="services-grid" id="servicesGrid"></div>
+
+  </div>
+</section>
+
+<!-- DOCTORS -->
+
+<section class="section" id="doctors">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="section-tag">OUR SPECIALISTS</span>
+      <h2>Meet Our Expert Doctors</h2>
+      <p>Experienced professionals focused on your health and wellbeing.</p>
+    </div>
+
+    <div class="doctor-toolbar">
+      <input
+        class="search-box"
+        id="doctorSearch"
+        placeholder="🔎 Search doctor or specialty..."
+        oninput="filterDoctors()">
+
+      <select class="filter-select" id="specialtyFilter" onchange="filterDoctors()">
+        <option value="all">All Specialties</option>
+      </select>
+    </div>
+
+    <div class="doctors-grid" id="doctorsGrid"></div>
+
+  </div>
+</section>
+
+<!-- APPOINTMENT BANNER -->
+
+<section class="section">
+  <div class="container">
+
+    <div class="appointment-banner">
+      <div>
+        <h2>Your health can't wait.</h2>
+        <p>Connect with an Aurelia specialist today.</p>
+      </div>
+
+      <button class="btn" style="background:white;color:var(--primary)" onclick="openAppointment()">
+        Schedule a Visit →
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- BED AVAILABILITY -->
+
+<section class="section" id="beds">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="section-tag">LIVE-STYLE AVAILABILITY</span>
+      <h2>Hospital Bed Availability</h2>
+      <p>Plan your care with a clear view of current capacity across Aurelia's inpatient units.</p>
+    </div>
+
+    <div class="bed-summary" id="bedSummary"></div>
+
+    <div class="bed-grid" id="bedGrid"></div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="section-tag">WHY AURELIA</span>
+      <h2>Modern medicine with a human touch.</h2>
+      <p>
+        Aurelia combines advanced healthcare technology with compassionate
+        patient-centered care.
+      </p>
+    </div>
+
+    <p class="about-copy">
+      From preventive checkups to complex procedures, our multidisciplinary
+      teams work together to make every stage of care clearer, calmer, and
+      more connected. We are committed to safe treatment, open communication,
+      and better outcomes for every family we serve.
+    </p>
+
+    <div class="quick-grid">
+
+      <div class="quick-card">
+        <div class="quick-icon">🏆</div>
+        <h3>Clinical Excellence</h3>
+        <p>Experienced specialists and advanced medical infrastructure.</p>
+      </div>
+
+      <div class="quick-card">
+        <div class="quick-icon">🧬</div>
+        <h3>Advanced Technology</h3>
+        <p>Modern diagnostic and treatment technologies.</p>
+      </div>
+
+      <div class="quick-card">
+        <div class="quick-icon">🔒</div>
+        <h3>Secure Patient Portal</h3>
+        <p>Designed to keep your healthcare information organized.</p>
+      </div>
+
+      <div class="quick-card">
+        <div class="quick-icon">❤️</div>
+        <h3>Human-Centered Care</h3>
+        <p>Every patient is treated with dignity and compassion.</p>
+      </div>
+
+    </div>
+
+    <div class="about-stats">
+      <div class="about-stat">
+        <strong>24/7</strong>
+        <span>Emergency and critical care</span>
+      </div>
+      <div class="about-stat">
+        <strong>40+</strong>
+        <span>Specialist care pathways</span>
+      </div>
+      <div class="about-stat">
+        <strong>98%</strong>
+        <span>Patient satisfaction target</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================================================
+     PATIENT DASHBOARD
+====================================================== -->
+
+<section class="dashboard-section" id="patientDashboard">
+
+  <div class="container dashboard-layout">
+
+    <aside class="dashboard-sidebar">
+      <div class="brand" style="color:white">
+        <span class="brand-icon">✚</span>
+        Aurelia
+      </div>
+
+      <h3>Patient Portal</h3>
+
+      <div class="dash-nav">
+        <button class="active" onclick="showDashPanel('patient','overview',this)">🏠 Overview</button>
+        <button onclick="showDashPanel('patient','appointments',this)">📅 Appointments</button>
+        <button onclick="showDashPanel('patient','reports',this)">🧪 Lab Reports</button>
+        <button onclick="showDashPanel('patient','prescriptions',this)">💊 Prescriptions</button>
+        <button onclick="showDashPanel('patient','records',this)">📋 Records</button>
+        <button onclick="showDashPanel('patient','payments',this)">💳 Payments</button>
+        <button onclick="logout()">↪ Logout</button>
+      </div>
+    </aside>
+
+    <div class="dashboard-content">
+
+      <div class="dash-top">
+        <div>
+          <h2>Good morning, Aravind 👋</h2>
+          <p>Here's your healthcare overview.</p>
+        </div>
+        <div class="user-pill">👤 Patient</div>
+      </div>
+
+      <!-- PATIENT OVERVIEW -->
+
+      <div id="patient-overview" class="dash-panel">
+
+        <div class="metric-grid">
+
+          <div class="metric-card">
+            <span>Upcoming Visits</span>
+            <strong>2</strong>
+          </div>
+
+          <div class="metric-card">
+            <span>Lab Reports</span>
+            <strong>8</strong>
+          </div>
+
+          <div class="metric-card">
+            <span>Prescriptions</span>
+            <strong>3</strong>
+          </div>
+
+          <div class="metric-card">
+            <span>Outstanding Bill</span>
+            <strong>₹2,450</strong>
+          </div>
+
+        </div>
+
+        <div class="dashboard-card">
+          <h3>Next Appointment</h3>
+
+          <div class="report-item">
+            <div>
+              <h4>Dr. Priya Sharma</h4>
+              <p>Neurology · Aurelia Main Campus</p>
+              <p>📅 12 October 2026 · 10:30 AM</p>
+            </div>
+
+            <button class="btn btn-primary btn-small" onclick="showToast('Appointment details opened')">
+              View
+            </button>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <h3>Recent Activity</h3>
+
+          <div class="report-item">
+            <div>
+              <h4>Blood Test Report</h4>
+              <p>Uploaded today</p>
+            </div>
+            <span class="badge badge-green">Available</span>
+          </div>
+
+          <div class="report-item">
+            <div>
+              <h4>Prescription Updated</h4>
+              <p>Dr. Arun Kumar</p>
+            </div>
+            <span class="badge badge-blue">Updated</span>
+          </div>
+
+          <div class="report-item">
+            <div>
+              <h4>Payment Received</h4>
+              <p>Invoice #AUR-10291</p>
+            </div>
+            <span class="badge badge-green">Paid</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- APPOINTMENTS -->
+
+      <div id="patient-appointments" class="dash-panel hidden">
+
+        <div class="dashboard-card">
+          <h3>My Appointments</h3>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Doctor</th>
+                  <th>Department</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><strong>Dr. Priya Sharma</strong></td>
+                  <td>Neurology</td>
+                  <td>12 Oct 2026</td>
+                  <td>10:30 AM</td>
+                  <td><span class="badge badge-green">Confirmed</span></td>
+                </tr>
+
+                <tr>
+                  <td><strong>Dr. Meera Iyer</strong></td>
+                  <td>Pediatrics</td>
+                  <td>28 Oct 2026</td>
+                  <td>03:00 PM</td>
+                  <td><span class="badge badge-orange">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- REPORTS -->
+
+      <div id="patient-reports" class="dash-panel hidden">
+
+        <div class="dashboard-card">
+          <h3>Laboratory Reports</h3>
+
+          <div class="report-item">
+            <div>
+              <h4>Complete Blood Count</h4>
+              <p>08 Sep 2026 · Pathology</p>
+            </div>
+            <button class="btn btn-outline btn-small" onclick="showToast('Report opened')">View PDF</button>
+          </div>
+
+          <div class="report-item">
+            <div>
+              <h4>Lipid Profile</h4>
+              <p>05 Sep 2026 · Pathology</p>
+            </div>
+            <button class="btn btn-outline btn-small" onclick="showToast('Report opened')">View PDF</button>
+          </div>
+
+          <div class="report-item">
+            <div>
+              <h4>Thyroid Function Test</h4>
+              <p>28 Aug 2026 · Biochemistry</p>
+            </div>
+            <button class="btn btn-outline btn-small" onclick="showToast('Report opened')">View PDF</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRESCRIPTIONS -->
+
+      <div id="patient-prescriptions" class="dash-panel hidden">
+
+        <div class="dashboard-card">
+          <h3>Active Prescriptions</h3>
+
+          <div class="report-item">
+            <div>
+              <h4>Prescription #RX-8842</h4>
+              <p>Dr. Arun Kumar · 10 Sep 2026</p>
+            </div>
+            <span class="badge badge-green">Active</span>
+          </div>
+
+          <div class="report-item">
+            <div>
+              <h4>Prescription #RX-8791</h4>
+              <p>Dr. Priya Sharma · 29 Aug 2026</p>
+            </div>
+            <span class="badge badge-green">Active</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RECORDS -->
+
+      <div id="patient-records" class="dash-panel hidden">
+
+        <div class="dashboard-card">
+          <h3>Medical Records</h3>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Record</th>
+                  <th>Doctor</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>10 Sep 2026</td>
+                  <td>Consultation Notes</td>
+                  <td>Dr. Arun Kumar</td>
+                  <td>Cardiology</td>
+                </tr>
+
+                <tr>
+                  <td>08 Sep 2026</td>
+                  <td>Blood Test</td>
+                  <td>Pathology</td>
+                  <td>Lab</td>
+                </tr>
+
+                <tr>
+                  <td>28 Aug 2026</td>
+                  <td>MRI Scan</td>
+                  <td>Radiology</td>
+                  <td>Imaging</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PAYMENTS -->
+
+      <div id="patient-payments" class="dash-panel hidden">
+
+        <div class="dashboard-card">
+          <h3>Billing & Payments</h3>
+
+          <div class="metric-grid">
+
+            <div class="metric-card">
+              <span>Total Paid</span>
+              <strong>₹18,650</strong>
+            </div>
+
+            <div class="metric-card">
+              <span>Outstanding</span>
+              <strong>₹2,450</strong>
+            </div>
+
+          </div>
+
+          <button class="btn btn-primary" onclick="openPayment()">
+            💳 Pay Outstanding Bill
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     DOCTOR DASHBOARD
+====================================================== -->
+
+<section class="dashboard-section" id="doctorDashboard">
+
+  <div class="container dashboard-layout">
+
+    <aside class="dashboard-sidebar">
+      <div class="brand" style="color:white">
+        <span class="brand-icon">✚</span>
+        Aurelia
+      </div>
+
+      <h3>Doctor Portal</h3>
+
+      <div class="dash-nav">
+        <button class="active" onclick="showDashPanel('doctor','overview',this)">🏠 Overview</button>
+        <button onclick="showDashPanel('doctor','appointments',this)">📅 Schedule</button>
+        <button onclick="showDashPanel('doctor','patients',this)">👥 Patients</button>
+        <button onclick="showDashPanel('doctor','prescriptions',this)">💊 Prescriptions</button>
+        <button onclick="showDashPanel('doctor','reports',this)">🧪 Reports</button>
+        <button onclick="logout()">↪ Logout</button>
+      </div>
+    </aside>
+
+    <div class="dashboard-content">
+
+      <div class="dash-top">
+        <div>
+          <h2>Doctor Dashboard</h2>
+          <p>Manage your clinical workflow.</p>
+        </div>
+        <div class="user-pill">👨‍⚕️ Doctor</div>
+      </div>
+
+      <div id="doctor-overview" class="dash-panel">
+
+        <div class="metric-grid">
+
+          <div class="metric-card">
+            <span>Today's Appointments</span>
+            <strong>12</strong>
+          </div>
+
+          <div class="metric-card">
+            <span>Patients</span>
+            <strong>486</strong>
+          </div>
+
+          <div class="metric-card">
+            <span>Pending Reports</span>
+            <strong>7</strong>
+          </div>
+
+          <div class="metric-card">
+            <span>Experience</span>
+            <strong>15Y</strong>
+          </div>
+
+        </div>
+
+        <div class="dashboard-card">
+          <h3>Today's Schedule</h3>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Patient</th>
+                  <th>Time</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><strong>Aravind R.</strong></td>
+                  <td>09:30 AM</td>
+                  <td>Follow-up</td>
+                  <td><span class="badge badge-green">Confirmed</span></td>
+                </tr>
+
+                <tr>
+                  <td><strong>Rahul M.</strong></td>
+                  <td>10:30 AM</td>
+                  <td>Consultation</td>
+                  <td><span class="badge badge-orange">Waiting</span></td>
+                </tr>
+
+                <tr>
+                  <td><strong>Priya K.</strong></td>
+                  <td>11:30 AM</td>
+                  <td>Follow-up</td>
+                  <td><span class="badge badge-blue">Upcoming</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="doctor-appointments" class="dash-panel hidden">
+        <div class="dashboard-card">
+          <h3>Appointment Schedule</h3>
+          <p style="color:var(--muted)">
+            Your appointment schedule is displayed here.
+          </p>
+        </div>
+      </div>
+
+      <div id="doctor-patients" class="dash-panel hidden">
+
+        <div class="dashboard-card">
+          <h3>Recent Patients</h3>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Patient</th>
+                  <th>Age</th>
+                  <th>Last Visit</th>
+                  <th>Condition</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><strong>Aravind R.</strong></td>
+                  <td>24</td>
+                  <td>10 Sep</td>
+                  <td>Follow-up</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Rahul M.</strong></td>
+                  <td>42</td>
+                  <td>08 Sep</td>
+                  <td>Hypertension</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Priya K.</strong></td>
+                  <td>35</td>
+                  <td>07 Sep</td>
+                  <td>Routine</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="doctor-prescriptions" class="dash-panel hidden">
+
+        <div class="dashboard-card">
+          <h3>Prescription Management</h3>
+
+          <button class="btn btn-primary" onclick="showToast('Prescription editor opened')">
+            + Create Prescription
+          </button>
+
+        </div>
+
+      </div>
+
+      <div id="doctor-reports" class="dash-panel hidden">
+
+        <div class="dashboard-card">
+          <h3>Pending Reports</h3>
+
+          <div class="report-item">
+            <div>
+              <h4>Blood Panel · Aravind R.</h4>
+              <p>Uploaded 10 minutes ago</p>
+            </div>
+            <button class="btn btn-outline btn-small">Review</button>
+          </div>
+
+          <div class="report-item">
+            <div>
+              <h4>MRI · Rahul M.</h4>
+              <p>Uploaded today</p>
+            </div>
+            <button class="btn btn-outline btn-small">Review</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     ADMIN DASHBOARD
+====================================================== -->
+
+<section class="dashboard-section" id="adminDashboard">
+
+  <div class="container dashboard-layout">
+
+    <aside class="dashboard-sidebar">
+
+      <div class="brand" style="color:white">
+        <span class="brand-icon">✚</span>
+        Aurelia
+      </div>
+
+      <h3>Admin Panel</h3>
+
+      <div class="dash-nav">
+        <button class="active" onclick="showDashPanel('admin','overview',this)">🏠 Overview</button>
+        <button onclick="showDashPanel('admin','doctors',this)">👨‍⚕️ Doctors</button>
+        <button onclick="showDashPanel('admin','patients',this)">👥 Patients</button>
+        <button onclick="showDashPanel('admin','beds',this)">🛏️ Beds</button>
+        <button onclick="showDashPanel('admin','payments',this)">💳 Payments</button>
+        <button onclick="logout()">↪ Logout</button>
+      </div>
+
+    </aside>
+
+    <div class="dashboard-content">
+
+      <div class="dash-top">
+        <div>
+          <h2>Admin Control Center</h2>
+          <p>Monitor hospital operations.</p>
+        </div>
+
+        <div class="user-pill">🛠️ Administrator</div>
+      </div>
+
+      <div id="admin-overview" class="dash-panel">
+
+        <div class="metric-grid">
+
+          <div class="metric-card">
+            <span>Total Patients</span>
+            <strong>12,480</strong>
+          </div>
+
+          <div class="metric-card">
+            <span>Doctors</span>
+            <strong>154</strong>
+          </div>
+
+          <div class="metric-card">
+            <span>Appointments Today</span>
+            <strong>327</strong>
+          </div>
+
+          <div class="metric-card">
+            <span>Available Beds</span>
+            <strong>86</strong>
+          </div>
+
+        </div>
+
+        <div class="dashboard-card">
+          <h3>System Alerts</h3>
+
+          <div class="admin-alert">
+            <div>⚠️</div>
+            <div>
+              <strong>ICU capacity approaching threshold</strong>
+              <p>Only 3 ICU beds are currently available.</p>
+            </div>
+          </div>
+
+          <div class="admin-alert">
+            <div>ℹ️</div>
+            <div>
+              <strong>7 lab reports awaiting review</strong>
+              <p>Review pending diagnostic reports.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="admin-doctors" class="dash-panel hidden">
+        <div class="dashboard-card">
+          <h3>Doctor Management</h3>
+
+          <button class="btn btn-primary btn-small" onclick="showToast('Add doctor form opened')">
+            + Add Doctor
+          </button>
+
+          <div class="table-wrap" style="margin-top:20px">
+            <table>
+              <thead>
+                <tr>
+                  <th>Doctor</th>
+                  <th>Department</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><strong>Dr. Arun Kumar</strong></td>
+                  <td>Cardiology</td>
+                  <td><span class="badge badge-green">Active</span></td>
+                </tr>
+
+                <tr>
+                  <td><strong>Dr. Priya Sharma</strong></td>
+                  <td>Neurology</td>
+                  <td><span class="badge badge-green">Active</span></td>
+                </tr>
+
+                <tr>
+                  <td><strong>Dr. Meera Iyer</strong></td>
+                  <td>Pediatrics</td>
+                  <td><span class="badge badge-orange">On Leave</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="admin-patients" class="dash-panel hidden">
+        <div class="dashboard-card">
+          <h3>Patient Management</h3>
+          <p style="color:var(--muted)">
+            12,480 registered patients in the hospital system.
+          </p>
+        </div>
+      </div>
+
+      <div id="admin-beds" class="dash-panel hidden">
+        <div class="dashboard-card">
+          <h3>Bed Management</h3>
+          <div class="bed-grid" id="adminBedGrid"></div>
+        </div>
+      </div>
+
+      <div id="admin-payments" class="dash-panel hidden">
+        <div class="dashboard-card">
+          <h3>Payment Overview</h3>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <span>Today's Revenue</span>
+              <strong>₹8.42L</strong>
+            </div>
+
+            <div class="metric-card">
+              <span>Transactions</span>
+              <strong>482</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <div class="brand" style="color:white;margin-bottom:15px">
+          <span class="brand-icon">✚</span>
+          Aurelia
+        </div>
+
+        <p>
+          Advanced healthcare designed around you.
+          Compassionate care powered by technology.
+        </p>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <div class="footer-links">
+          <a href="#services">Cardiology</a>
+          <a href="#services">Neurology</a>
+          <a href="#services">Orthopedics</a>
+          <a href="#services">Pediatrics</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Hospital</h3>
+        <div class="footer-links">
+          <a href="#about">About Us</a>
+          <a href="#doctors">Our Doctors</a>
+          <a href="#beds">Bed Availability</a>
+          <a href="#" onclick="openAppointment()">Appointments</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <div class="footer-links">
+          <span>📍 Chennai, Tamil Nadu</span>
+          <span>📞 +91 1800 123 4567</span>
+          <span>✉️ care@aurelia.example</span>
+          <span>🚑 Emergency: 108</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aurelia Hospital. Frontend demonstration.</span>
+      <span>Designed for a modern healthcare experience.</span>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- ======================================================
+     AUTH MODAL
+====================================================== -->
+
+<div class="modal" id="authModal">
+
+  <div class="modal-box">
+
+    <button class="close-modal" onclick="closeModal('authModal')">×</button>
+
+    <h2 id="authTitle">Welcome Back</h2>
+    <p class="modal-subtitle">Access your Aurelia healthcare portal.</p>
+
+    <div class="auth-tabs">
+      <button id="loginTab" class="active" onclick="switchAuth('login')">Login</button>
+      <button id="registerTab" onclick="switchAuth('register')">Register</button>
+    </div>
+
+    <form id="authForm" onsubmit="handleAuth(event)">
+
+      <div id="registerNameGroup" class="form-group hidden">
+        <label>Full Name</label>
+        <input id="authName" type="text" placeholder="Enter your name">
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input id="authEmail" type="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input id="authPassword" type="password" placeholder="••••••••" required>
+      </div>
+
+      <div id="roleGroup" class="form-group">
+        <label>Demo Login Role</label>
+        <select id="authRole">
+          <option value="patient">Patient</option>
+          <option value="doctor">Doctor</option>
+          <option value="admin">Administrator</option>
+        </select>
+      </div>
+
+      <button class="btn btn-primary" style="width:100%" type="submit">
+        Continue →
+      </button>
+
+    </form>
+
+    <p style="margin-top:15px;text-align:center;color:var(--muted);font-size:11px">
+      Frontend demo only — no real authentication is performed.
+    </p>
+
+  </div>
+
+</div>
+
+<!-- ======================================================
+     APPOINTMENT MODAL
+====================================================== -->
+
+<div class="modal" id="appointmentModal">
+
+  <div class="modal-box">
+
+    <button class="close-modal" onclick="closeModal('appointmentModal')">×</button>
+
+    <h2>Book an Appointment</h2>
+    <p class="modal-subtitle">
+      Choose your specialist and preferred appointment time.
+    </p>
+
+    <form onsubmit="submitAppointment(event)">
+
+      <div class="form-group">
+        <label>Patient Name</label>
+        <input id="appointmentName" required placeholder="Enter patient name">
+      </div>
+
+      <div class="form-group">
+        <label>Specialty</label>
+        <select id="appointmentSpecialty" required>
+          <option value="">Select specialty</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Doctor</label>
+        <select id="appointmentDoctor" required>
+          <option value="">Select doctor</option>
+        </select>
+      </div>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" required>
+        </div>
+
+        <div class="form-group">
+          <label>Time</label>
+          <select required>
+            <option>09:00 AM</option>
+            <option>10:30 AM</option>
+            <option>12:00 PM</option>
+            <option>02:30 PM</option>
+            <option>04:00 PM</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label>Reason for Visit</label>
+        <textarea rows="3" placeholder="Briefly describe your concern"></textarea>
+      </div>
+
+      <button class="btn btn-primary" style="width:100%">
+        Confirm Appointment
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- ======================================================
+     PAYMENT MODAL
+====================================================== -->
+
+<div class="modal" id="paymentModal">
+
+  <div class="modal-box">
+
+    <button class="close-modal" onclick="closeModal('paymentModal')">×</button>
+
+    <h2>Secure Online Payment</h2>
+    <p class="modal-subtitle">
+      Frontend payment interface demonstration.
+    </p>
+
+    <div class="payment-summary">
+      <div style="display:flex;justify-content:space-between">
+        <span>Outstanding Hospital Bill</span>
+        <strong style="color:var(--navy)">₹2,450</strong>
+      </div>
+
+      <small style="color:var(--muted)">
+        Invoice #AUR-10291
+      </small>
+    </div>
+
+    <form onsubmit="processPayment(event)">
+
+      <div class="form-group">
+        <label>Cardholder Name</label>
+        <input required placeholder="Name on card">
+      </div>
+
+      <div class="form-group">
+        <label>Card Number</label>
+        <input required maxlength="19" placeholder="1234 5678 9012 3456">
+      </div>
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Expiry</label>
+          <input required placeholder="MM/YY">
+        </div>
+
+        <div class="form-group">
+          <label>CVV</label>
+          <input required maxlength="3" type="password" placeholder="•••">
+        </div>
+
+      </div>
+
+      <button class="btn btn-primary" style="width:100%">
+        🔒 Pay ₹2,450
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- ======================================================
+     TOAST
+====================================================== -->
+
+<div class="toast" id="toast"></div>
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
